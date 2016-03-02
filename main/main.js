@@ -31,14 +31,9 @@ function getLCDInfo(neededLCDArrs) {
 		var tempInfo = "";
 		for (var j = 0; j < neededLCDArrs.length; j++) {
 			tempInfo += neededLCDArrs[j].substring(i * 3, (i + 1) * 3);
-			if(j === neededLCDArrs.length - 1) {
-				tempInfo += "\n";
-			}
-			else {
-				tempInfo += " ";
-			}
+			tempInfo += (j === neededLCDArrs.length - 1) ? "\n" : " ";
 		}
-	LCDInfo.push(tempInfo);
+		LCDInfo.push(tempInfo);
 	}
 	return LCDInfo;
 }
