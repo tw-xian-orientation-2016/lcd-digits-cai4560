@@ -8,3 +8,12 @@ function getDividedNumArr(number) {
 }
 
 /*     Task 2     */
+function getNeededLCDArrs(dividedNumArr, LCDArrs) {
+	var neededLCDArrs = [];
+	for (var i = 0; i < dividedNumArr.length; i++) {
+		neededLCDArrs.push(LCDArrs[dividedNumArr[i]]);
+	}
+	return neededLCDArrs;
+}
+
+/*     Task 3     */
