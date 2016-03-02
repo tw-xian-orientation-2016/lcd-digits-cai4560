@@ -13,10 +13,28 @@ describe('Task 2: GetNeededLCDArrs', function() {
 	describe('It should return correct NeededLCDArrs',function() {
 		it('when given 5-bit NumArr', function() {
 			var input = [1, 3, 5, 7, 9];
-			var expectResult = ["     |  |", " _  _| _|", " _ |_  _|",
-													" _   |  |", " _ |_|  |"];
+			var expectResult = ["     |  |",
+													" _  _| _|",
+													" _ |_  _|",
+													" _   |  |",
+													" _ |_|  |"];
 			var LCDArrs = loadLCDArrs();
 			var result = getNeededLCDArrs(input, LCDArrs);
+			expect(result).toEqual(expectResult);
+		});
+	});
+});
+
+describe('Task 3: GetLCDInfo', function() {
+	describe('It should return correct LCDInfo',function() {
+		it('when given 5-bit NumArr', function() {
+			var input = ["     |  |", " _  _| _|", " _ |_  _|",
+													" _   |  |", " _ |_|  |"];
+			var expectResult = ["   " + " " + " _ " + " " + " _ " + " " + " _ " + " " + " _ " + "\n",
+													"  |" + " " + " _|" + " " + "|_ " + " " + "  |" + " " + "|_|" + "\n",
+													"  |" + " " + " _|" + " " + " _|" + " " + "  |" + " " + "  |" + "\n"
+												];
+			var result = getLCDInfo(input);
 			expect(result).toEqual(expectResult) ;
 		});
 	});
