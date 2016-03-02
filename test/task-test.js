@@ -39,3 +39,19 @@ describe('Task 3: GetLCDInfo', function() {
 		});
 	});
 });
+
+describe('Task 4: Joint And Print', function() {
+	describe('It should print correct Info',function() {
+		it('when given 5-bit NumArr', function() {
+			var input = ["   " + " " + " _ " + " " + " _ " + " " + " _ " + " " + " _ " + "\n",
+									 "  |" + " " + " _|" + " " + "|_ " + " " + "  |" + " " + "|_|" + "\n",
+													"  |" + " " + " _|" + " " + " _|" + " " + "  |" + " " + "  |" + "\n"
+									];
+			var expectResult =   "   " + " " + " _ " + " " + " _ " + " " + " _ " + " " + " _ " + "\n"
+									 			+	 "  |" + " " + " _|" + " " + "|_ " + " " + "  |" + " " + "|_|" + "\n"
+												+	 "  |" + " " + " _|" + " " + " _|" + " " + "  |" + " " + "  |" + "\n";
+			var result = jointAndPrint(input);
+			expect(result).toEqual(expectResult) ;
+		});
+	});
+});

@@ -1,3 +1,11 @@
+/*     Main-Test     */
+function LCDNumber(number) {
+	var dividedNumArr = getDividedNumArr(number);
+	var LCDArrs = loadLCDArrs();
+	var neededLCDArrs = getNeededLCDArrs(dividedNumArr, LCDArrs);
+	var LCDInfo = getLCDInfo(neededLCDArrs);
+	console.log(jointAndPrint(LCDInfo));
+}
 /*     Task 1     */
 function getDividedNumArr(number) {
 	var dividedNumArr = [];
@@ -33,4 +41,9 @@ function getLCDInfo(neededLCDArrs) {
 	LCDInfo.push(tempInfo);
 	}
 	return LCDInfo;
+}
+
+/*     Task 4     */
+function jointAndPrint(LCDInfo) {
+	return LCDInfo[0] + LCDInfo[1] + LCDInfo[2];
 }
